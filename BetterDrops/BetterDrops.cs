@@ -13,7 +13,7 @@ namespace BetterDrops
         public override string Name { get; } = "BetterDrops";
         public override string Prefix { get; } = "better_drops";
         public override Version Version { get; } = new Version(1, 0, 3);
-        public override Version RequiredExiledVersion { get; } = new Version(4, 1, 7);
+        public override Version RequiredExiledVersion { get; } = new Version(6, 0, 0);
 
         public static PluginConfig Cfg;
         public static EventManager EventManager;

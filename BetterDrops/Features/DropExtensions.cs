@@ -10,7 +10,7 @@ namespace BetterDrops.Features
             switch (team)
             {
                 case Team.ChaosInsurgency:
-                    return new Vector3(Random.Range(46.5f, 33), 1000 + Random.Range(25f, 73f), Random.Range(-51, -37));
+                    return new Vector3(Random.Range(31f, -5f), 1000 + Random.Range(25f, 73f), Random.Range(-51, -37));
                 case Team.FoundationForces:
                     return new Vector3(Random.Range(115, 138), 1000 + Random.Range(25f, 73f), Random.Range(-37f, -50));
                      

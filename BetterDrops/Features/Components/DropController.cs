@@ -2,6 +2,7 @@
 using Exiled.API.Features.Items;
 using UnityEngine;
 using MEC;
+using PluginAPI.Core;
 
 namespace BetterDrops.Features.Components
 {
@@ -47,13 +48,13 @@ namespace BetterDrops.Features.Components
         {
             var collider = gameObject.AddComponent<BoxCollider>();
             collider.isTrigger = true;
-            collider.size = Vector3.one * 7.5f;
+            collider.size = Vector3.one * 5f;
             collider.center = Vector3.up;
         }
         
         private void OnTriggerEnter(Collider other)
         {
-            if(!_collided || _crateOpened || other.gameObject.name != "Head")
+            if(!_collided || _crateOpened || !other.gameObject.name.Contains("Player"))
                 return;
 
             _crateOpened = true;

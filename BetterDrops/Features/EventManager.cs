@@ -32,9 +32,11 @@ namespace BetterDrops.Features
             
             if(team == Team.FoundationForces && !BetterDrops.Cfg.MtfDrops || team == Team.ChaosInsurgency && !BetterDrops.Cfg.ChaosDrops)
                 return;
-                
+
             for (var i = 0; i < BetterDrops.Cfg.NumberOfDrops[team]; i++)
+            {
                 new Drop(team.GetRandomDropSpawnPoint()).Spawn();
+            }
         }
 
         private IEnumerator<float> RandomDropCoroutine(float offset)

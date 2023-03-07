@@ -31,7 +31,7 @@ namespace BetterDrops.Features.Data
             _balloon = new SimplifiedToy(PrimitiveType.Sphere, Vector3.up * 2.125f, Vector3.zero, Vector3.one * -2, rndColor).Spawn(transform);
             new SimplifiedLight(Vector3.zero, rndColor).Spawn(_balloon.transform).transform.SetParent(_balloon.transform);
             
-            var scale = new Vector3(-0.01f, -1, -0.01f);
+            var scale = new Vector3(-0.01f, -1, -0.01f) * 0.717f;
             
             for (float i = -0.5f; i < 1; i++)
             for (float j = -0.5f; j < 1; j++)

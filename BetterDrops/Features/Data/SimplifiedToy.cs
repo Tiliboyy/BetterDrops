@@ -50,7 +50,7 @@ namespace BetterDrops.Features.Data
             toy.NetworkScale = _scale; // Fix collision smh (it needs both localScale and networkScale for some reason)
             toy.NetworkMaterialColor = _color;
             toy.NetworkMovementSmoothing = 60;
-
+            
             NetworkServer.Spawn(toy.gameObject);
 
             return toy.gameObject;

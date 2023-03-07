@@ -20,7 +20,7 @@ namespace BetterDrops.Features.Components
             ChangeLayers(transform, BetterDrops.Cfg.DropLayer);
             
             _rigidbody = gameObject.AddComponent<Rigidbody>();
-            _rigidbody.mass = 20;
+            _rigidbody.mass = 20 * 0.717f;
             _rigidbody.drag = 3;
             _rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
@@ -48,7 +48,7 @@ namespace BetterDrops.Features.Components
         {
             var collider = gameObject.AddComponent<BoxCollider>();
             collider.isTrigger = true;
-            collider.size = Vector3.one * 5f;
+            collider.size = Vector3.one * 5f * 0.717f;
             collider.center = Vector3.up;
         }
         

@@ -38,26 +38,32 @@
           <HintPath>..\packages\EXILED.6.0.0-beta.26\lib\net48\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-          <HintPath>..\..\..\Documents\Assembly\Assembly-CSharp-firstpass.dll</HintPath>
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="CommandSystem.Core">
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\CommandSystem.Core.dll</HintPath>
         </Reference>
         <Reference Include="CommandSystem.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\packages\EXILED.6.0.0-beta.26\lib\net48\CommandSystem.Core.dll</HintPath>
         </Reference>
         <Reference Include="Mirror">
-          <HintPath>..\..\..\Documents\Assembly\Mirror.dll</HintPath>
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\Mirror.dll</HintPath>
+        </Reference>
+        <Reference Include="NorthwoodLib">
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\NorthwoodLib.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
         <Reference Include="UnityEngine">
-          <HintPath>..\..\..\Documents\Assembly\UnityEngine.dll</HintPath>
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>..\..\..\Documents\Assembly\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.PhysicsModule">
-          <HintPath>..\..\..\Documents\Assembly\UnityEngine.PhysicsModule.dll</HintPath>
+          <HintPath>..\..\..\SCP Secret Laboratory\Assembly\UnityEngine.PhysicsModule.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -74,7 +80,7 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="EXILED" Version="6.0.0-beta.26" />
+      <PackageReference Include="EXILED" Version="7.0.0-rc.2-1" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

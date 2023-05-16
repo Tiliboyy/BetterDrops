@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using BetterDrops.Features.Components;
+using Exiled.API.Features;
 using UnityEngine;
 
 namespace BetterDrops.Features.Data
@@ -19,20 +20,18 @@ namespace BetterDrops.Features.Data
         public void Spawn()
         {
             var transform = _gameObject.transform;
-
             for (float i = -0.5f; i < 1; i++)
             {
                 _faces.Add(new Face(new Vector3(i,0,0), Vector3.up * 90, transform).GameObject);
                 _faces.Add(new Face(new Vector3(0,i,0), Vector3.right * 90, transform).GameObject);
                 _faces.Add(new Face(new Vector3(0,0,i), Vector3.zero, transform).GameObject);
             }
-            
+
             var rndColor = Random.ColorHSV();
             _balloon = new SimplifiedToy(PrimitiveType.Sphere, Vector3.up * 2.125f, Vector3.zero, Vector3.one * -2, rndColor).Spawn(transform);
             new SimplifiedLight(Vector3.zero, rndColor).Spawn(_balloon.transform).transform.SetParent(_balloon.transform);
-            
             var scale = new Vector3(-0.01f, -1, -0.01f) * 0.717f;
-            
+
             for (float i = -0.5f; i < 1; i++)
             for (float j = -0.5f; j < 1; j++)
                 new SimplifiedToy(PrimitiveType.Cylinder, new Vector3(i, 1, j), new Vector3(0, 100 * j * (i * -2), -20 * i), scale, Color.white).Spawn(transform).transform.SetParent(_balloon.transform);
@@ -40,6 +39,7 @@ namespace BetterDrops.Features.Data
             var controller = _gameObject.AddComponent<DropController>();
             controller.balloon = _balloon;
             controller.faces = _faces;
+
         }
 
         private class Face

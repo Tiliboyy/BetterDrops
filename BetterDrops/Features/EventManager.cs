@@ -3,6 +3,7 @@ using Respawning;
 using BetterDrops.Features.Data;
 using Exiled.Events.EventArgs;
 using System.Collections.Generic;
+using Exiled.API.Features;
 using Exiled.Events.EventArgs.Server;
 using PlayerRoles;
 using Random = UnityEngine.Random;
@@ -29,7 +30,7 @@ namespace BetterDrops.Features
         public void OnRespawningTeam(RespawningTeamEventArgs ev)
         {
             var team = ev.NextKnownTeam == SpawnableTeamType.NineTailedFox ? Team.FoundationForces : Team.ChaosInsurgency;
-            
+
             if(team == Team.FoundationForces && !BetterDrops.Cfg.MtfDrops || team == Team.ChaosInsurgency && !BetterDrops.Cfg.ChaosDrops)
                 return;
 
@@ -39,7 +40,7 @@ namespace BetterDrops.Features
             }
         }
 
-        private IEnumerator<float> RandomDropCoroutine(float offset)
+        public IEnumerator<float> RandomDropCoroutine(float offset)
         {
             yield return Timing.WaitForSeconds(offset);
 
